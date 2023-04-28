@@ -1,11 +1,6 @@
 spring:
   cloud:
     stream:
-#      rocketmq:
-#        bindings:
-#          huxintestOutput:
-#            producer:
-#              group: huxintestOutput-DF
       bindings: #注意：rocketmq中不允许相同的consumerGroup消费不同的topic，会造成数据丢失
         userStatusChangeConsumer:
           destination: idaas_user_user_status_change_test
@@ -83,11 +78,6 @@ jarvis:
         binder: kafka1
         type: input
         messageModel: BROADCASTING
-#      userStatusChangeConsumer:
-#        destination: idaas_user_user_status_change_test
-#        group: idaas_user_user_status_change_test
-#        binder: kafka1
-#        type: input
       huxintestOutput:
          destination: huxin_test
          type: output
