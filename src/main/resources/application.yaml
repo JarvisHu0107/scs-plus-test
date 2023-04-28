@@ -37,7 +37,7 @@ spring:
 #                      name-server: 10.10.2.99:9876
 
 
-para:
+jarvis:
   scs:
     binders:
       kafka1:
